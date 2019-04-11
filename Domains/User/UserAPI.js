@@ -31,6 +31,7 @@ route.post('/',(req,res)=>{
      ).then(([data,created])=>{
         if(created)
         {
+            console.log('successsss')
             res.send({success:true,message:'Entered successfully'});
         }
         else

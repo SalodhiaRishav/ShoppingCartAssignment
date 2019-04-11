@@ -5,11 +5,14 @@ $('#signUpButton').click(()=>{
     user.email=$('#emailId').val();
     user.password=$('#password').val();
 
-   $.post('http://localhost:1156/api/users/',user,
-   (data)=>{
+   $.post('http://localhost:1156/api/users/',user,(data)=>{
+  
     if(data.success)
     {
-       alert('user added Successfully')
+      alert('you are successfully registered.. ');
+    
+      window.location = "http://localhost:1156/UserUI/Login/Login.html";
+
     }else
     {
       alert(data.message)
