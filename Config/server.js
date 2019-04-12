@@ -21,7 +21,7 @@ app.use('/api/carts',require(__dirname+'/../Domains/Cart/CartAPI').route);
 database.sync()
   .then(() => {
     console.log('database synced successfully...');
-    const PORT=1156;
+    const PORT=process.env.PORT||1156;
     app.listen(PORT,()=>{
         console.log('server is running at '+'http://localhost:'+PORT);
     })
