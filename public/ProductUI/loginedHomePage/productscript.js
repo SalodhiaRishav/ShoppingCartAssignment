@@ -2,7 +2,7 @@
 
 function refreshList() {
    
-    $.get('http://localhost:1156/api/products/', (data) => {
+    $.get('/api/products/', (data) => {
       $('#productList').empty()
    if(data.success)
    {
@@ -38,7 +38,7 @@ function refreshList() {
   function addToCart(productId)
   {
     
-    let path='http://localhost:1156/api/carts';
+    let path='/api/carts';
     
     let userId=localStorage['userid'];
     let txtBox='#qty'+productId
@@ -75,7 +75,7 @@ function refreshList() {
      
      alert('you are going to log out')
      localStorage.setItem('userid',null);
-     window.location='http://localhost:1156/';
+     window.location='/';
    })
 
 

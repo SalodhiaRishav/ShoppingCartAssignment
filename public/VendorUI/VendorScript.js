@@ -1,5 +1,5 @@
     function refreshList() {
-      $.get('http://localhost:1156/api/vendors/', (data) => {
+      $.get('/api/vendors/', (data) => {
         $('#vendorList').empty()
      if(data.success)
      {
@@ -27,7 +27,7 @@
     refreshList()
     function deleteThisVendor(id)
     {
-      let path='http://localhost:1156/api/vendors/'+id;
+      let path='/api/vendors/'+id;
       $.ajax({
         url: path,
         type: 'DELETE',
@@ -46,7 +46,7 @@
   
     $('#addVendorButton').click(() => {
       $.post(
-        'http://localhost:1156/api/vendors/',
+        '/api/vendors/',
         {
           name: $('#vendorName').val()
         },
@@ -65,5 +65,5 @@
      
       alert('you are going to log out')
       localStorage.setItem('userid',null);
-      window.location='http://localhost:1156/';
+      window.location='/';
     })

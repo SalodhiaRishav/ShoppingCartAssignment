@@ -4,7 +4,9 @@
   "description": "node assignment",
   "main": "Config/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+
+
+    "start": "node Config/server.js"
   },
   "author": "",
   "license": "ISC",

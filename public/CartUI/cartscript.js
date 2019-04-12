@@ -1,7 +1,7 @@
 let totalPrice=0;
 function refreshList() {
    let userId=localStorage['userid'];
-   let path='http://localhost:1156/api/carts/'+userId;
+   let path='/api/carts/'+userId;
     $.get(path, (data) => {
       $('#productList').empty()
    if(data.success)
@@ -9,7 +9,7 @@ function refreshList() {
      
       for (let product of data.data) {
         
-        let path ='http://localhost:1156/api/products/'+product.productId;
+        let path ='/api/products/'+product.productId;
        
         $.get(path,(mproduct)=>{
           
@@ -54,7 +54,7 @@ function refreshList() {
   {
     let userId=localStorage['userid'];
     
-    let path='http://localhost:1156/api/carts/delete?userId='+userId+'&productId='+productId;
+    let path='/api/carts/delete?userId='+userId+'&productId='+productId;
  
     $.ajax({
       url: path,
@@ -76,5 +76,5 @@ function refreshList() {
      
     alert('you are going to log out')
     localStorage.setItem('userid',null);
-    window.location='http://localhost:1156/';
+    window.location='/';
   })

@@ -4,7 +4,7 @@ $('#login').click(()=>{
     loginuser.password=$('#password').val();
 
       
-   $.post('http://localhost:1156/api/users/login/',loginuser,
+   $.post('/api/users/login/',loginuser,
    (data)=>{
    if(data.success){
       alert('you are logged in');
@@ -13,7 +13,7 @@ $('#login').click(()=>{
 
       if(data.data.email==="rishav@admin.com")
       {
-       window.location = "http://localhost:1156/VendorUI/Vendor.html";
+       window.location = "/VendorUI/Vendor.html";
 
       }else
       {
