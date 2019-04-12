@@ -17,7 +17,7 @@ $('#login').click(()=>{
 
       }else
       {
-       window.location = "http://localhost:1156/ProductUI/loginedHomePage/Product.html";
+       window.location = "/ProductUI/loginedHomePage/Product.html";
 
       }
    }
